@@ -1,0 +1,181 @@
+// To import google fonts which provide al variety of fonts that canbe used in our project
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Beau+Rivage&family=Concert+One&family=Exo+2:ital,wght@0,400;1,300;1,400&family=Josefin+Sans:ital@1&family=Lobster&family=Roboto+Serif:opsz,wght@8..144,300&family=Yellowtail&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* It adds basic styles to the body tag of the html file */
+
+body{
+    /* background-color: black; */
+    background: #060c21;
+    color: #fff;
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    margin: 0;
+}
+/* It adds basic styles to the div tag with class 'container' of the html file */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    max-width: 800px;
+}
+/* It adds common styles to the input and button tag together of the html file */
+
+input,button[type='text']{
+    padding:5px 10px;
+    border: 1px solid #dedede;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    
+}
+/* It adds basic styles to the input tag with id 'search' of the html file */
+
+#search{
+    padding: 15px 15px;
+    margin-top: 30px;
+    width: 90%;
+    background: linear-gradient(limegreen,lightgreen);
+    font-size: 20px;
+    border: 4px solid #fff;
+    border-radius: 4px;
+}
+/* It adds basic styles to the div tag with class 'flex' of the html file */
+.flex{
+    display: flex;
+}
+/*It adds basic styles to the button tag with class 'search-btn' of the html file  */
+.search-btn{
+    cursor: pointer;
+    outline: none;
+    margin: 0;
+    border: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+   margin-top: 30px;
+   width: 10%;
+   background: linear-gradient(limegreen,lightgreen);
+   
+   border-radius: 4px;
+}
+/* It adds basic styles to the h1 tag of the html file  */
+h1{
+    margin-top: 20px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-size:8em;
+}
+/* It adds basic styles to the div tag with class 'meals' of the html file  */
+.meals{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+/* It adds basic styles to the div tag with class 'meal' of the html file  */
+.meal{
+    cursor: pointer;
+    position: relative;
+    height: 180px;
+    width: 180px;
+    text-align: center;
+    
+
+}
+/* It adds basic styles to the image tag within div tag with class 'meal' of the html file  */
+
+ .meal img{
+    width: 100%;
+    height: 100%;
+    border: 4px solid #fff;
+    border-radius: 4px;
+}
+/* It adds basic styles to the div tag with class 'meal-info' of the html file  */
+ 
+.meal-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease-in;
+    opacity: 0;
+}
+.meal:hover .meal-info{
+    opacity: 1;
+} 
+/* It adds basic styles to the div tag with class 'single-meal' of the html file  */
+
+.single-meal{
+    margin: 30px;
+    width: 70%;
+}
+/* It adds basic styles to the image tag within div tag class 'single-meal' of the html file  */
+
+.single-meal img{
+    width: 300px;
+    margin: 15px;
+    border: 4px #fff solid;
+    border-radius: 2px;
+}
+/* It adds basic styles to the div tag with class 'single-meal-info' of the html file  */
+
+.single-meal-info{
+    margin: 20px;
+    padding: 10px;
+    border: 2px #e09850 dashed;
+    border-radius: 5px;
+}
+/* It adds basic styles to the paragraph tag within div tag with class 'meal' of the html file  */
+
+.single-meal p{
+    margin: 0;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+/* Adding CSS media queries at different breakpoints  */
+/* At 800px */
+@media (max-width:800px){
+    .meals{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+/* At 700px */
+@media (max-width:700px){
+    .meals{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .meal{
+        height: 200px;
+        height: 200px;
+
+    }
+}
+/* At 500px */
+@media (max-width:500px){
+    input[type='text']{
+        width: 100%;
+    }
+    .meals{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .meal{
+        height: 300px;
+        height: 300px;
+
+    }
+}
+
+
